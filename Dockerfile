@@ -5,6 +5,7 @@ ADD gogs_v0.6.15_linux_arm.zip gogs-entry.sh app.ini /opt/
 RUN export DEBIAN_FRONTEND=noninteractive\
  && apt-get -q -y update\
  && apt-get -q -y upgrade\
+ && apt-get install -y curl wget\
  && apt-get clean
 
 RUN gpg --keyserver pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4\
