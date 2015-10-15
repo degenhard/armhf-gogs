@@ -1,1 +1,0 @@
-# armhf-gogs
