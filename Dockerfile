@@ -4,6 +4,9 @@ ADD gogs_v0.6.15_linux_arm.zip gogs-entry.sh app.ini /opt/
 
 RUN apt-get install -y git && apt-get clean
 
+RUN unzip -e /opt/gogs_v0.6.15_linux_arm.zip -d /opt\
+ && rm /opt/gogs_v0.6.15_linux_arm.zip
+
 RUN groupadd gogs && useradd -m -g gogs gogs\
  && mkdir -p /repository && chown gogs:gogs /repository\
  && mkdir -p /data && chown gogs:gogs /data\
